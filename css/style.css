@@ -1,0 +1,147 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+section {
+  width: 80vw;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 15px #18191A;
+          box-shadow: 0 0 15px #18191A;
+}
+
+section .sq-tab ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+section .sq-tab ul li {
+  list-style: none;
+  display: block;
+  width: 20%;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+
+section .sq-tab ul li a {
+  display: block;
+  font-size: 25px;
+  text-decoration: none;
+  border-bottom: 1px solid rgb(25, 247, 255);
+  color: rgb(255, 255, 255);
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+section .sq-tab ul li a.active {
+  border: 1px solid rgb(25, 247, 255);
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+}
+
+.sq-content .tab-content {
+
+  background-size: cover;
+  height: 70vh;
+  padding: 10px 15px;
+  margin-top: 10px;
+  display: none;
+}
+
+.boxx1{
+  background: url(../img/img1.jpg) no-repeat center center;
+}
+.boxx2{
+  background: url(../img/img2.jpg) no-repeat center center;
+}
+.boxx3{
+  background: url(../img/img3.jpg) no-repeat center center;
+}
+.boxx4{
+  background: url(../img/img4.jpg) no-repeat center center;
+}
+.boxx5{
+  background: url(../img/img5.jpg) no-repeat center center;
+}
+
+
+.sq-content .tab-content.active {
+  display: block;
+}
+
+.sq-content .tab-content h1 {
+  font-size: 25px;
+  font-weight: 600;
+  color: rgb(64, 233, 176);
+}
+
+.sq-content .tab-content p {
+  font-size: 20px;
+  line-height: 35px;
+  font-weight: 400;
+  color: rgb(246, 250, 28);
+}
+.tab-content img{
+  width: 100%;
+  height: 100% !important;
+  max-width: 100%;
+}
+
+/* =========================== */
+.shadow {
+  position: relative;
+  background: linear-gradient(#000, #262626);
+}
+
+/* .shadow img {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 10px;
+  bottom: 10px;
+} */
+
+.shadow:before, 
+.shadow:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+  background-size: 500%;
+  z-index: -1;
+  animation: amimate 30s ease infinite;
+}
+
+.shadow:after {
+  filter: blur(20px);
+}
+
+@keyframes amimate {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 300% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
